@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="b2.2.css">
+    <title>Bai2.3</title>
+</head>
+
+<body>
+<div class="contain">
+    <h2>Payment Receipt Upload Form</h2>
+    <form id="uploadForm" action="bai2.3.php" method="POST" enctype="multipart/form-data">
+        <div class="row">
+            <div class="group">
+                <label id="name">Name</label>
+            </div>
+        </div>
+        <div class="row">                   
+            <div class="group">              
+                <input type="text" id="first-name" name="firstname">
+                <div id="under">firstname</div>
+            </div>
+            <div class="group">               
+                <input type="text" id="last-name" name="lastname">
+                <div id="under">lastname</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="example@example.com">
+            </div>
+            <div class="group">
+                <label for="invoice-id">Invoice ID</label>
+                <input type="text" id="invoice-id" name="invoiceid">
+            </div>
+        </div>
+        <div class="check">
+            <label id="lb1">Pay For</label>
+                <div class="bigcheckbox">
+                    <label><input type="checkbox" name="payfor[]" value="15k"> 15K Category</label>
+                    <label><input type="checkbox" name="payfor[]" value="35k"> 35K Category</label>
+                    <label><input type="checkbox" name="payfor[]" value="55k"> 55K Category</label>
+                    <label><input type="checkbox" name="payfor[]" value="75k"> 75K Category</label>
+                    <label><input type="checkbox" name="payfor[]" value="116k"> 116K Category</label>
+                    <label><input type="checkbox" name="payfor[]" value="shuttle-one-way"> Shuttle One Way</label>
+                    <label><input type="checkbox" name="payfor[]" value="shuttle-two-ways"> Shuttle Two Ways</label>
+                    <label><input type="checkbox" name="payfor[]" value="compressport-tshirt"> Compressport T-Shirt Merchandise</label>
+                    <label><input type="checkbox" name="payfor[]" value="training-cap"> Training Cap Merchandise</label>
+                    <label><input type="checkbox" name="payfor[]" value="buf-merchandise"> Buf Merchandise</label>
+                    <label><input type="checkbox" name="payfor[]" value="other"> Other</label>
+                </div>
+            </div>
+            <div class="upload">
+                <h3>Please upload your payment receipt.</h3>            
+                  <div class="upload-box" id="dropZone">                    
+                    <input type="file" id="pic" name="pic" accept="image/*">
+                    <span>Browse Files<br>or Drag and drop files here</span>
+                  </div>
+                  <p class="under">jpg, jpeg, png, gif (1mb max.)</p>
+                  <br>
+                  <h3>Additional Information</h3>
+                  <div class="info">
+                    <textarea id="additionalInfo" name="additionalInfo" placeholder="Type here..."></textarea>
+                  </div>       
+            <button class="button">submit</button>
+        </div>       
+    </form>
+</div>
+
+</body>
+</html>
